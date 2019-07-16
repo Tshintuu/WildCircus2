@@ -1,10 +1,10 @@
 .signButton {
-    width: 10%;
-    margin: 2%;
+    width: 40%;
+    margin: 8%;
 }
 
 .signContainer {
-    margin-top: 15%;
+    margin-top: 50%;
 }
 
  /* The Modal (background) */
@@ -27,12 +27,12 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
+    width: 80%; /* Could be more or less, depending on screen size */
   }
 
   .modal-content button {
-      width: 20%;
-      margin: 3%;
+      width: 40%;
+      margin: 10%;
   }
   
   /* The Close Button */
@@ -42,7 +42,7 @@
     font-size: 28px;
     font-weight: bold;
     text-align: right;
-    width: 4%;
+    width: 6%;
   }
   
   .close:hover,
@@ -52,6 +52,30 @@
     cursor: pointer;
   } 
 
-  input {
-      width: 50%;
+  @media (min-width: 992px) {
+      .signButton {
+          width: 10%;
+          margin: 2%;
+      }
+
+      .signContainer {
+          margin-top: 15%;
+      }
+
+      .modal-content {
+          width: 40%;
+      }
+
+      .modal-content button {
+          width: 20%;
+          margin: 3%;
+      }
+
+      input {
+          width: 50%;
+      }
+
+      .close {
+          width: 4%;
+      }
   }
