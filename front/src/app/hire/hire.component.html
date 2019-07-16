@@ -1,1 +1,13 @@
-<p>hire works!</p>
+<h2 class="text-center mt-3 mt-md-5">Hire new artist</h2>
+<h3 class="text-center mt-5">Your troupe is still lacking the very special element? Hire 'em all!</h3>
+
+<div class="d-flex flex-column align-items-center hireContainer">
+<button (click)="modalDisplay()">Hire a random artist</button>
+</div>
+
+<div id="hireModal" class="modal">
+        <div class="modal-content d-flex">
+                <span class="align-self-end close" (click)="closeModal()">&times;</span>
+            <p class="text-center">Congratulations! This gifted artist is now part of your troupe!!</p>
+        </div>
+</div>

@@ -9,6 +9,14 @@ export class HireComponent implements OnInit {
 
   constructor() { }
 
+  modalDisplay() {
+    document.getElementById("hireModal").style.display="block";
+  }
+
+  closeModal() {
+    document.getElementById("hireModal").style.display="none";
+  }
+
   ngOnInit() {
   }
 
