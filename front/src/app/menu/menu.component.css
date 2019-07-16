@@ -1,0 +1,40 @@
+.wildCircus {
+    
+    border: 2px solid black;
+    width: 30%;
+    padding-top: 4%;
+}
+
+.wild {
+    font-family: 'Barriecito', cursive;
+    font-size: 1.4rem;
+}
+
+.circus {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.navButton {
+    border: none;
+    margin-right: 0;
+}
+
+.navIcon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+    border: none;
+}
+
+.menuItems {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.menuItems li {
+    cursor: pointer;
+    transition: text-shadow 0.5s;
+}
+
+.menuItems li:hover {
+    text-shadow: 2px 2px 10px black;
+    transition: all 0.5s;
+}

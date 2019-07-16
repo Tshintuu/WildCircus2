@@ -1,0 +1,44 @@
+<nav class="d-none d-md-flex container-fluid row no-gutters">
+  <div class="col-md-4 mt-3 container row no-gutters justify-content-center">
+    <div class="wildCircus">
+      <p class="text-center wild">Wild</p>
+      <p class="text-center circus">Circus</p>
+    </div>
+  </div>
+  <ul class="col-md-8 d-flex justify-content-around align-items-center menuItems">
+    <li routerLink="/troupe" routerLinkActive="active">My troupe</li>
+    <li routerLink="/hire" routerLinkActive="active">Hire artist</li>
+  </ul>
+</nav>
+<nav class="d-md-none navbar navbar-light light-blue lighten-4">
+
+        <div class="col-12 container row no-gutters justify-content-center">
+                <div class="wildCircus">
+                  <p class="text-center wild">Wild</p>
+                  <p class="text-center circus">Circus</p>
+                </div>
+              </div>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler toggler-example navButton" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+    aria-label="Toggle navigation"><span class="navbar-toggler-icon navIcon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/troupe">My troupe <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/hire">Hire artist</a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
