@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
 
   modalDisplay(buttonType) {
     document.getElementById(buttonType).style.display = "block";
-    this.authService.loggedUser(null).subscribe();
   }
 
   closeModal(buttonType) {
