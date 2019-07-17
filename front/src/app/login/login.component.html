@@ -10,11 +10,12 @@
         <div class="modal-content d-flex">
                 <span class="align-self-end close" (click)="closeModal('signInModal')">&times;</span>
             <p class="text-center">Please enter your password and username.</p>
+            <p *ngIf="wrongCredentials" class="text-center errorMessage">Wrong username or password, please retry.</p>
         <label for="username">Username</label>
-            <input type="text" name="username" required>
-            <label for="password">Password</label>
-            <input type="password" name="password" required>
-            <button class="align-self-center">Sign in</button>
+            <input type="text" name="username" [(ngModel)]="username" required>
+            <label class="mt-2" for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="password" required>
+            <button class="align-self-center" (click)="signIn()">Sign in</button>
         </div>
         
 </div>
@@ -23,9 +24,9 @@
                 <span class="align-self-end close" (click)="closeModal('signUpModal')">&times;</span>
             <p class="text-center">Please enter a username and password.</p>
         <label for="username">Username</label>
-            <input type="text" name="username" required>
+            <input type="text" name="username" [(ngModel)]="username" required>
             <label for="password">Password (min. 8 characters)</label>
-            <input type="password" name="password" minlength="8" required>
-            <button class="align-self-center">Sign up</button>
+            <input type="password" name="password" minlength="8" [(ngModel)]="password" required>
+            <button class="align-self-center" (click)="signUp()">Sign up</button>
         </div>
 </div>

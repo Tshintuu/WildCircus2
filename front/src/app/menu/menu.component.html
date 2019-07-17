@@ -5,19 +5,22 @@
       <p class="text-center circus">Circus</p>
     </div>
   </div>
-  <ul class="col-md-8 d-flex justify-content-around align-items-center menuItems">
-    <li routerLink="/troupe" routerLinkActive="active">My troupe</li>
-    <li routerLink="/hire" routerLinkActive="active">Hire artist</li>
-  </ul>
+  <div class="col-md-8">
+    <p class="col-12 pt-3 text-right">{{loggedUser}}</p>
+    <ul class="col-md-12 d-flex justify-content-around align-items-center menuItems">
+      <li routerLink="/troupe" routerLinkActive="active">My troupe</li>
+      <li routerLink="/hire" routerLinkActive="active">Hire artist</li>
+    </ul>
+  </div>
 </nav>
 <nav class="d-md-none navbar navbar-light light-blue lighten-4">
 
-        <div class="col-12 container row no-gutters justify-content-center">
-                <div class="wildCircus">
-                  <p class="text-center wild">Wild</p>
-                  <p class="text-center circus">Circus</p>
-                </div>
-              </div>
+  <div class="col-12 container row no-gutters justify-content-center">
+    <div class="wildCircus">
+      <p class="text-center wild">Wild</p>
+      <p class="text-center circus">Circus</p>
+    </div>
+  </div>
 
   <!-- Collapse button -->
   <button class="navbar-toggler toggler-example navButton" type="button" data-toggle="collapse"
