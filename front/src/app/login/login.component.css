@@ -1,6 +1,88 @@
+.wildCircus {
+    
+    width: 30%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    position: relative;
+}
+
+.wildCircusStaticFrame {
+    border: 2px solid black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wildCircusRotatedFrame {
+    border: 2px solid black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(10deg);
+}
+
+.wild {
+    font-family: 'Barriecito', cursive;
+    font-size: 2.5rem;
+}
+
+.circus {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.4rem;
+}
+
 .signButton {
     width: 40%;
     margin: 8%;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.signButton:hover .buttonUpperFrame {
+    transform: translate(2px, 2px);
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+
+.signButton:hover .buttonLowerFrame {
+    transform: translate(-2px, -2px);
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+
+.buttonUpperFrame {
+    border: 2px solid black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.buttonLowerFrame {
+    border: 2px solid black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.modalButton {
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.modalButton:hover .buttonUpperFrame {
+    transform: translate(2px, 2px);
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+
+.modalButton:hover .buttonLowerFrame {
+    transform: translate(-2px, -2px);
+    border: 1px solid black;
+    transition: all 0.2s;
 }
 
 .signContainer {
@@ -50,7 +132,12 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
-  } 
+  }
+  
+  .errorMessage {
+      color: red;
+      padding-left: 3%;
+  }
 
   @media (min-width: 992px) {
       .signButton {
@@ -77,5 +164,9 @@
 
       .close {
           width: 4%;
+      }
+
+      .wildCircus {
+          width: 10%;
       }
   }

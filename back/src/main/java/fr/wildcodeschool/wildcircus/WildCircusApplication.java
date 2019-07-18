@@ -1,13 +1,13 @@
-package fr.wildcodeschool.wild.circus2;
+package fr.wildcodeschool.wildcircus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WildCircus2Application {
+public class WildCircusApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WildCircus2Application.class, args);
+		SpringApplication.run(WildCircusApplication.class, args);
 	}
 
 }

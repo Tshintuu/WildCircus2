@@ -1,31 +1,55 @@
-<h1 class="text-center mt-5">Wild Circus</h1>
+<div class="m-auto mt-md-5 p-md-0 wildCircus">
+  <div class="wildCircusStaticFrame">
+  </div>
+  <div class="wildCircusRotatedFrame">
+  </div>
+  <p class="text-center wild">Wild</p>
+  <p class="text-center circus">Circus</p>
+</div>
 
 <div class="d-flex flex-column justify-content-center align-items-center signContainer">
-  <button id="signIn" class="signButton" (click)="modalDisplay('signInModal')">Sign-in</button>
-  <button id="signUp" class="signButton" (click)="modalDisplay('signUpModal')">Sign up</button>
+  <button id="signIn" class="signButton" (click)="modalDisplay('signInModal')">
+    <div class="buttonUpperFrame"></div>
+    <div class="buttonLowerFrame"></div>
+    Sign-in
+  </button>
+  <button id="signUp" class="signButton" (click)="modalDisplay('signUpModal')">
+    <div class="buttonUpperFrame"></div>
+    <div class="buttonLowerFrame"></div>
+    Sign up
+  </button>
 </div>
 
-<div id="signInModal" class="modal" >
-        
-        <div class="modal-content d-flex">
-                <span class="align-self-end close" (click)="closeModal('signInModal')">&times;</span>
-            <p class="text-center">Please enter your password and username.</p>
-        <label for="username">Username</label>
-            <input type="text" name="username" required>
-            <label for="password">Password</label>
-            <input type="password" name="password" required>
-            <button class="align-self-center">Sign in</button>
-        </div>
-        
+<div id="signInModal" class="modal">
+
+  <div class="modal-content d-flex">
+    <span class="align-self-end close" (click)="closeModal('signInModal')">&times;</span>
+    <p class="text-center">Please enter your password and username.</p>
+    <p *ngIf="wrongCredentials" class="text-center errorMessage">Wrong username or password, please retry.</p>
+    <label for="username">Username</label>
+    <input type="text" name="username" [(ngModel)]="username" required>
+    <label class="mt-2" for="password">Password</label>
+    <input type="password" name="password" [(ngModel)]="password" required>
+    <button class="align-self-center modalButton" (click)="signIn()">
+            <div class="buttonUpperFrame"></div>
+            <div class="buttonLowerFrame"></div>
+            Sign in
+        </button>
+  </div>
+
 </div>
 <div id="signUpModal" class="modal">
-        <div class="modal-content d-flex">
-                <span class="align-self-end close" (click)="closeModal('signUpModal')">&times;</span>
-            <p class="text-center">Please enter a username and password.</p>
-        <label for="username">Username</label>
-            <input type="text" name="username" required>
-            <label for="password">Password (min. 8 characters)</label>
-            <input type="password" name="password" minlength="8" required>
-            <button class="align-self-center">Sign up</button>
-        </div>
+  <div class="modal-content d-flex">
+    <span class="align-self-end close" (click)="closeModal('signUpModal')">&times;</span>
+    <p class="text-center">Please enter a username and password.</p>
+    <label for="username">Username</label>
+    <input type="text" name="username" [(ngModel)]="username" required>
+    <label for="password">Password (min. 8 characters)</label>
+    <input type="password" name="password" minlength="8" [(ngModel)]="password" required>
+    <button class="align-self-center modalButton" (click)="signUp()">
+            <div class="buttonUpperFrame"></div>
+            <div class="buttonLowerFrame"></div>
+            Sign up
+        </button>
+  </div>
 </div>
