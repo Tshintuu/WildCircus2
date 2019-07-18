@@ -60,12 +60,13 @@ export class LoginComponent implements OnInit {
 
   signUp() {
     let jsonObject = {
-      "username" : this.regUsername,
-      "password" : this.regPassword
+      "username" : this.username,
+      "password" : this.password
     }
 
     this.registerService.register(jsonObject).subscribe();
-    console.log("done");
+    console.log("username: "+this.username);
+    console.log("done "+ jsonObject.username + ", " + jsonObject.password);
 
   }
 

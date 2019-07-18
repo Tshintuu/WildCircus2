@@ -13,7 +13,7 @@ const HttpOptions = {
 })
 export class RegisterService {
 
-  private url:string = "http://localhost:8080/authenticate"
+  private url:string = "http://localhost:8080/register"
 
   constructor(private http:HttpClient) { }
 

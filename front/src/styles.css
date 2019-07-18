@@ -1,1 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barriecito|Josefin+Sans&display=swap');
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}

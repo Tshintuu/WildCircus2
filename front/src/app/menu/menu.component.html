@@ -1,15 +1,27 @@
 <nav class="d-none d-md-flex container-fluid row no-gutters">
   <div class="col-md-4 mt-3 container row no-gutters justify-content-center">
     <div class="wildCircus">
+      <div class="wildCircusStaticFrame">
+      </div>
+      <div class="wildCircusRotatedFrame">
+      </div>
       <p class="text-center wild">Wild</p>
       <p class="text-center circus">Circus</p>
     </div>
   </div>
   <div class="col-md-8">
-    <p class="col-12 pt-3 text-right">{{loggedUser}}</p>
+    <p class="col-12 pt-3 text-right logOut" (click)="logOut()">Log out</p>
     <ul class="col-md-12 d-flex justify-content-around align-items-center menuItems">
-      <li routerLink="/troupe" routerLinkActive="active">My troupe</li>
-      <li routerLink="/hire" routerLinkActive="active">Hire artist</li>
+      <li class="menuListItem" routerLink="/troupe" routerLinkActive="active">
+        <div class="menuUpperFrame"></div>
+        <div class="menuLowerFrame"></div>
+        <p class="m-1">My troupe</p>
+      </li>
+      <li class="menuListItem" routerLink="/hire" routerLinkActive="active">
+        <div class="menuUpperFrame"></div>
+        <div class="menuLowerFrame"></div>
+        <p class="m-1">Hire artist</p>
+      </li>
     </ul>
   </div>
 </nav>
