@@ -3,6 +3,9 @@ import { User } from '../user';
 import { AuthenticationService } from '../authentication.service';
 import { Router } from '@angular/router';
 import { LogId } from '../log-id';
+import { TokenService } from '../token.service';
+import { UserService } from '../user.service';
+import { RegisterService } from '../register.service';
 
 @Component({
   selector: 'app-login',
@@ -15,10 +18,12 @@ export class LoginComponent implements OnInit {
   userList:User[];
   username:string;
   password: string;
+  regUsername:string;
+  regPassword:string;
   wrongCredentials:boolean;
   userId:number;
 
-  constructor(private authService:AuthenticationService, private router:Router) {
+  constructor(private loginService:TokenService, private service:UserService, private registerService:RegisterService, private router:Router) {
 
     this.userList = [];
 
@@ -35,39 +40,37 @@ export class LoginComponent implements OnInit {
   }
 
   signIn() {
-    for(let i = 0; i < this.userList.length; i++) {
-      if(this.username == this.userList[i].username && this.password == this.userList[i].password) {
-        this.router.navigateByUrl("/troupe");
-
-        let logObject = {
-          "username" : this.userList[i].username
-        }
-        this.authService.loggedUser(logObject).subscribe();
-      } else {
-        this.wrongCredentials = true;
-      }
+    console.log("Signing in...");
+    let logObject = {
+      "username" : this.username,
+      "password" : this.password
     }
+    this.loginService.login(logObject).subscribe(
+      () => {
+        if (this.service.getToken()!= null ){
+          this.router.navigateByUrl("/troupe");
+          console.log("Granted, navigating");
+        } else {
+          this.wrongCredentials = true;
+          console.log("Denied...");
+        }
+      }
+    );
   }
 
   signUp() {
     let jsonObject = {
-      "id" : this.userList.length + 1,
-      "username" : this.username,
-      "password" : this.password
+      "username" : this.regUsername,
+      "password" : this.regPassword
     }
 
-    this.authService.addUser(jsonObject).subscribe();
+    this.registerService.register(jsonObject).subscribe();
     console.log("done");
 
   }
 
   ngOnInit() {
 
-    this.authService.getUser().subscribe(
-      (param_data:User[]) => {
-        this.userList = param_data;
-      }
-    );
     
     
   }

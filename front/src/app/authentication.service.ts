@@ -14,7 +14,7 @@ export class AuthenticationService {
 
   constructor(private http:HttpClient) { }
 
-  userUrl = "http://localhost:3000/user";
+  /*userUrl = "http://localhost:3000/user";
   logUrl = "http://localhost:3000/loggedUser"
 
   public getUser():Observable<User[]> {
@@ -37,5 +37,5 @@ export class AuthenticationService {
 
   public getLoggedUser():Observable<LogId> {
     return this.http.get<LogId>(this.logUrl)
-  }
+  }*/
 }

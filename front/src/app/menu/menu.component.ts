@@ -18,11 +18,11 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     
 
-    this.authService.getLoggedUser().subscribe(
+    /*this.authService.getLoggedUser().subscribe(
       (param_data:LogId) => {
         this.loggedUser = param_data.username;
       }
-    )
+    )*/
 
     
     
