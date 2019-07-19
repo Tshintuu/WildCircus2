@@ -44,7 +44,28 @@ h3 {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  } 
+  }
+  
+  .hireButton {
+    position: relative;
+    background-color: transparent;
+    border: 2px solid black;
+  }
+
+  .hireButton:hover .hireButtonFrame {
+    transform: rotate(0);
+    transition: all 0.2s;
+  }
+
+  .hireButtonFrame {
+    position: absolute;
+    left: 0;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-5deg);
+    transition: transform 0.2s;
+  }
 
 @media (min-width: 992px) {
     h3 {

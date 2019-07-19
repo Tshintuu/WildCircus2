@@ -19,7 +19,6 @@ export class MenuComponent implements OnInit {
 
    logOut(){
     this.loginService.logout();
-    location.reload();
     this.router.navigateByUrl("/");
   }
 
